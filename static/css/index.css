@@ -83,6 +83,18 @@ nav {
   z-index: 1000;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
 footer {
   position: fixed;
   bottom: 0;

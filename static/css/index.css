@@ -9,47 +9,70 @@ html {
 }
 
 body {
-  font-family: 'Sora', sans-serif;
-  background: radial-gradient(circle at top right, #5825C1, #000000);
-  color: #F5F5FF;
-  padding-top: 80px;    /* espacio para nav */
-  padding-bottom: 80px; /* espacio para footer */
+  font-family: "Sora", sans-serif;
+  background: radial-gradient(circle at top right, #5825c1, #000000);
+  color: #f5f5ff;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 1rem;
   min-height: 100vh;
 }
 
 .container {
   max-width: 1000px;
-  width: 100%;
-  margin: auto;
-  text-align: center;
   background: rgba(255, 255, 255, 0.05);
   padding: 3rem 2rem;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+section {
+  padding: 2rem 8rem;
+  max-width: 4000px;
+  /* margin: 0 auto; si pongo esto se centra*/ 
+  color: #f5f5ff;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: block;
+  text-align: justify;
+}
+.botones {
+  display: flex;
+  justify-content: center; /* opcional: centra los botones */
+  gap: 1rem; /* espacio horizontal entre botones */
+  flex-wrap: wrap;
+   /* permite que se acomoden bien en pantallas chicas */
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #EAE6F2;
+  color: #eae6f2;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #E58FFF;
+  color: #e58fff;
   margin-bottom: 1rem;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #DED0EB;
+  color: #ded0eb;
 }
 
 .boton {
@@ -57,7 +80,7 @@ p {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #9914C1, #E58FFF);
+  background: linear-gradient(135deg, #9914c1, #e58fff);
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -74,25 +97,49 @@ nav {
   left: 0;
   width: 100%;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centra el contenido dentro del nav */
+  align-items: center;
 }
 
 .row {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: center; /* Centra los elementos hijos */
   align-items: center;
+  gap: 2rem; /* Espacio entre cada enlace */
 }
 
-.logo {
-  width: 70px;
-  height: auto;
+nav .logo {
+  height: 60px;
+  width: 90px;
+  margin-right: 1rem;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  color: #fff;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  white-space: nowrap; /* 👈 esto evita que se divida en 2 líneas */
+}
+a:hover {
+  color: #e58fff;
+  border-radius: 8px;
+  border: 2px solid #ded0eb;
+  padding: 10px 20px;
+  transform: scale(1.05);
 }
 
 footer {
@@ -110,10 +157,8 @@ footer {
 }
 
 img {
-  width: 50%;
-  max-width: 300px;
+  width: 70%;
   height: auto;
   border-radius: 50%;
-  /* box-shadow: 0 0 20px rgba(153, 20, 193, 0.4); */
   margin-top: 2rem;
 }

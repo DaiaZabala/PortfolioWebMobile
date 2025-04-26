@@ -48,6 +48,10 @@ section {
   display: block;
   text-align: justify;
 }
+col{
+  text-align: justify;
+  text-indent: 1em;
+}
 .botones {
   display: flex;
   justify-content: center; /* opcional: centra los botones */
@@ -68,11 +72,30 @@ h2 {
   color: #e58fff;
   margin-bottom: 1rem;
 }
+h3 .lenguaje{
+  font-size: 18px;
+  text-indent: 2rem;
+}
 
 p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: #ded0eb;
+  text-align: justify;
+  text-indent: 1em;
+}
+.titu{
+text-align: center;
+}
+.titulos{
+  text-decoration:underline;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e58fff;
+  margin-bottom: 1rem;
+  text-decoration-thickness: 2px; /* opcional, para hacerlo más visible */
+  text-underline-offset: 10px;     /* esto lo hace "flotar" más abajo */
+  text-indent: 1rem;
 }
 
 .boton {
@@ -123,8 +146,8 @@ li {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
   color: #fff;
+  font-size: 16px;
 }
 
 a {
@@ -133,13 +156,29 @@ a {
   font-size: 16px;
   padding: 10px;
   white-space: nowrap; /* 👈 esto evita que se divida en 2 líneas */
+  
 }
+
 a:hover {
   color: #e58fff;
   border-radius: 8px;
   border: 2px solid #ded0eb;
   padding: 10px 20px;
   transform: scale(1.05);
+}
+
+.fechas{
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #e58fff;
+  border-radius: 8px;
+  border: 2px solid #ded0eb;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  
 }
 
 footer {
@@ -162,3 +201,38 @@ img {
   border-radius: 50%;
   margin-top: 2rem;
 }
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 450px; /* Ajusta el tamaño total de la card */
+}
+
+.card-img-top {
+  height: 250px; /* Aumenta la altura de la imagen */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-outline-light {
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+.fondo-proyectos {
+  background: linear-gradient(135deg, #5B2C6F, #8E44AD);/* o el color que prefieras */
+  padding: 80px 20px;
+  border-radius: 30px;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 800px; /* ajustá la altura si querés más o menos */
+}
+.iconos {
+  width: 64px;
+  height: 64px;
+  object-fit: contain; /* o "cover" si querés que llene el espacio */
+}
+
+

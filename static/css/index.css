@@ -12,9 +12,10 @@ body {
   font-family: "Sora", sans-serif;
   background: radial-gradient(circle at top right, #5825c1, #000000);
   color: #f5f5ff;
-  padding-bottom: 80px;
   min-height: 100vh;
   margin: 0;
+  padding-bottom: 70px; /* 👈 Espacio para que el footer no tape */
+
 }
 
 main {
@@ -86,6 +87,9 @@ p {
 }
 .titu{
 text-align: center;
+font-size: 2.5rem;
+  font-weight: 700;
+  color: #eae6f2;
 }
 .titulos{
   text-decoration:underline;
@@ -142,7 +146,7 @@ nav .logo {
   margin-right: 1rem;
 }
 
-li {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -181,27 +185,13 @@ a:hover {
   
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid #8a8a8a;
-  z-index: 1000;
-}
-
 img {
   width: 70%;
   height: auto;
   border-radius: 50%;
   margin-top: 2rem;
 }
-
+/*Cards Proyectos*/
 .card {
   border-radius: 10px;
   overflow: hidden;
@@ -253,7 +243,7 @@ img {
   border: none;
   height: 2px; /* Grosor de la línea */
   background: linear-gradient(to right, #8e44ad, #3498db); /* Degradado lindo */
-  margin: 40px 0; /* Separación arriba y abajo */
+  margin: 10px 0; /* Separación arriba y abajo */
   opacity: 0.7; /* Un poco de transparencia */
   border-radius: 5px; /* Bordes redondeados */
 }
@@ -265,5 +255,67 @@ img {
   display: block;
   margin: 0 auto;
 }
+/*Contacto*/
+label{
+  display: block; 
+	float: center; 	
+}
 
+.aviso{
+	font-size: 25px;  
+	color: white;  
+}
+.campo-formulario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
+.campo-formulario label {
+  width: 150px; /* o 200px, como quieras */
+  font-weight: bold;
+  text-align: right; /* Opcional: que el texto del label quede a la derecha */
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  flex: 0.80; /* ¡Esto hace que los campos se estiren! */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+span.obligatorio-contacto {
+  color: red;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+/*Footer*/
+.footer-row {
+  display: flex;
+  width: 100%;
+}
+
+.footer-col {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #8a8a8a;
+}
+.copy h2 {
+  font-size: 1rem; /* tamaño de un texto normal */
+  font-weight: 400; /* opcional: peso normal */
+  margin: 0; /* sin márgenes extra */
+  line-height: 1.2; /* altura de línea normal */
+}

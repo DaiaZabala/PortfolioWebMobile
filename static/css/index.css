@@ -201,16 +201,25 @@ img {
   border-radius: 50%;
   margin-top: 2rem;
 }
+
 .card {
-  border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
-  height: 450px; /* Ajusta el tamaño total de la card */
+  width: 100%;
+  min-height: 600px;
+  padding: 20px;
+  height: 100%;
 }
 
 .card-img-top {
-  height: 250px; /* Aumenta la altura de la imagen */
+  width: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease; /* Animación suave */
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* Agranda la imagen un 5% */
 }
 
 .card-body {
@@ -221,18 +230,40 @@ img {
   border-radius: 30px;
   padding: 8px 20px;
 }
+
 .fondo-proyectos {
-  background: linear-gradient(135deg, #5B2C6F, #8E44AD);/* o el color que prefieras */
-  padding: 80px 20px;
-  border-radius: 30px;
-  width: 90%;
+  background: linear-gradient(135deg, #5B2C6F, #8E44AD);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
   margin: 0 auto;
-  min-height: 800px; /* ajustá la altura si querés más o menos */
+  min-height: 800px;
+  border-radius: 40px;
+  overflow: hidden;
 }
+
+.fondo-proyectos .row {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.linea-suave {
+  border: none;
+  height: 2px; /* Grosor de la línea */
+  background: linear-gradient(to right, #8e44ad, #3498db); /* Degradado lindo */
+  margin: 40px 0; /* Separación arriba y abajo */
+  opacity: 0.7; /* Un poco de transparencia */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
 .iconos {
   width: 64px;
   height: 64px;
   object-fit: contain; /* o "cover" si querés que llene el espacio */
+  display: block;
+  margin: 0 auto;
 }
 
 

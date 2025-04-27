@@ -14,7 +14,7 @@ body {
   color: #f5f5ff;
   min-height: 100vh;
   margin: 0;
-  padding-bottom: 70px; /* 👈 Espacio para que el footer no tape */
+  padding-bottom: px; /* 👈 Espacio para que el footer no tape */
 
 }
 

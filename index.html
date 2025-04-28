@@ -27,7 +27,8 @@
   <body>
     <header>
       <nav>
-        <div class="row">
+        <button id="menu-toggle">☰</button> <!-- 👈 Botón hamburguesa -->
+        <div class="row" id="nav-links">
           <div class="col">
             <ul>
               <li><a href="#inicio">Inicio</a></li>
@@ -101,7 +102,7 @@
         <div class="col-8">
           <p>
             Mi nombre es <strong>Daiana Zabala</strong>, soy estudiante de la
-            carrera de Licenciatura en Sistemas de Información.
+            carrera de Licenciatura en Sistemas de Información, en la Universidad Nacional del Nordeste en la provincia de Corrientes.
           </p>
           <p>
             Tengo experiencia en el <strong>Desarrollo Full Stack</strong>,
@@ -144,7 +145,7 @@
             <h3 class="fechas">2024 Febrero - Julio</h3>
             <p>
               Curso de <strong>Programación Full Stack Python</strong>. Programa
-              decapacitación Codo a Codo.
+              de capacitación Codo a Codo.
             </p>
           </div>
           <div class="col">
@@ -373,7 +374,7 @@
                 alt="Imagen 3"
               />
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title">DESTINO- Agencias de Turismo</h5>
+                <h5 class="card-title">DESTINO - Agencias de Turismo</h5>
                 <p class="card-text">
                   Plataforma dedicada a los amantes del turismo en Argentina,
                   enfocada en tres destinos claves: San Luis del Palmar,
@@ -472,7 +473,7 @@
       <div class="row align-items-center">
         
         <!-- Columna Izquierda -->
-        <div class="col text-center text-md-start" style="width: 30%;">
+        <div class="col text-center text-md-start" style="width: 20%;">
           <ul class="list-unstyled small">
             <h3>Datos Parsonales:</h3>
             <br>
@@ -489,7 +490,7 @@
         </div>
     
         <!-- Columna del Medio -->
-        <div class="col text-center" style="width: 40%;">
+        <div class="col text-center" style="width: 80%;">
           <h3>Navegación</h3>
           <br>
           <ul class="list-inline small">
@@ -512,7 +513,7 @@
         </div>
     
         <!-- Columna Derecha -->
-        <div class="col d-flex justify-content-center justify-content-md-end gap-2" style="width: 30%;">
+        <div class="col d-flex justify-content-center justify-content-md-end gap-2" style="width: 20%;">
           <h3>Redes:</h3> 
           <br>
           <a href="https://wa.me/549379415924276" target="_blank" class="text-light">
@@ -549,5 +550,8 @@
           }, 5000); // 5 segundos
         });
     </script>
+ 
+  <script src="/static/menu-toggle.js"></script>
+
   </body>
 </html>

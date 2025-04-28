@@ -293,8 +293,10 @@ span.obligatorio-contacto {
 }
 
 /*Footer*/
+
 .footer-row {
   display: flex;
+  margin: 0;
   width: 100%;
 }
 
@@ -302,6 +304,7 @@ span.obligatorio-contacto {
   flex: 1;
   padding: 10px;
   text-align: center;
+  margin: 0;
 }
 
 footer {
@@ -318,4 +321,36 @@ footer {
   font-weight: 400; /* opcional: peso normal */
   margin: 0; /* sin márgenes extra */
   line-height: 1.2; /* altura de línea normal */
+}
+footer .list-inline {
+  display: flex;
+  flex-wrap: nowrap; /* NO permitir que bajen */
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+footer .list-inline-item {
+  margin: 0; /* Quitamos márgenes extra */
+  font-size: 0.9rem; /* Achicamos un poco el tamaño del texto */
+}
+
+footer a.text-light {
+  padding: 0 5px; /* Pequeño espacio lateral */
+  font-size: 0.9rem; /* Achicar letra de los links */
+}
+
+/* Estilo del botón hamburguesa */
+#menu-toggle {
+  display: none; /* Oculto por defecto */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 2001;
 }

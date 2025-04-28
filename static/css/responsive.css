@@ -1,0 +1,88 @@
+  /* 3. Tablets grandes (NUEVO) */
+  @media (min-width: 651px) and (max-width: 1024px) {
+/* Cambio en .container */
+.container {
+    max-width: 650px; /* Antes 1000px */
+  }
+  
+  /* Cambio en section */
+  section {
+    padding: 1rem 2rem; /* Antes era 2rem 8rem */
+  }
+  
+  /* Ajustar .fondo-proyectos */
+  .fondo-proyectos {
+    min-height: auto; /* Antes 800px */
+    padding: 20px;
+  }
+  
+  /* Imágenes más adaptables */
+  img {
+    width: 90%; /* Antes 70% */
+    height: auto;
+  }
+  
+  /* Cards */
+  .card {
+    min-height: auto; /* Quitar altura mínima forzada */
+    padding: 10px;
+  }
+  
+  /* Texto */
+  h1 {
+    font-size: 2rem; /* Antes 2.5rem */
+  }
+  
+  h2, .titu, .titulos {
+    font-size: 1.8rem; /* Ajustamos h2 también */
+  }
+  
+  p, li, a {
+    font-size: 1rem; /* General para lectura cómoda */
+  }
+  
+  /* Footer columnas (ajuste porque son 3) */
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-col {
+    margin-bottom: 1rem;
+  }
+    
+  /*VER*/
+  /* Estilo del botón hamburguesa */
+#menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 2001;
+  }
+  
+    #menu-toggle {
+      display: block; /* 👈 Mostrar hamburguesa */
+    }
+  
+    #nav-links {
+      display: none; /* 👈 Ocultar los links */
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 60px; /* Justo debajo del nav */
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    #nav-links.show {
+      display: flex; /* 👈 Mostrar links cuando se active */
+    }
+  }
+  

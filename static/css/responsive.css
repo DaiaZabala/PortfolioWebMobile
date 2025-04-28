@@ -84,4 +84,235 @@
     #nav-links.show {
       display: flex; /* 👈 Mostrar links cuando se active */
     }
+  }  
+
+  @media (max-width: 650px) {
+    /* Ajustes generales */
+    .container {
+      max-width: 100%;
+      padding: 2rem 1rem;
+    }
+  
+    section {
+      padding: 1rem;
+    }
+  
+    h1, .titu, .titulos {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, li, a {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  
+    /* Fondo de Proyectos */
+    .fondo-proyectos {
+      min-height: auto;
+      padding: 20px;
+    }
+  
+    /* Proyectos cards (importante para que entre 1 por fila) */
+    .fondo-proyectos .row {
+      flex-direction: column; /* 👈 apilamos en columna */
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .card {
+      width: 100%; /* 👈 que la card use todo el ancho */
+      min-height: auto;
+      padding: 1rem;
+    }
+  
+    .card-img-top {
+      height: auto;
+    }
+  
+    img {
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+    }
+  
+    /* Footer */
+    .footer-row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-col {
+      margin-bottom: 1rem;
+    }
+  
+    /* Botón hamburguesa */
+    #menu-toggle {
+      display: block;
+    }
+  
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    #nav-links.show {
+      display: flex;
+    }
   }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Footer adaptado para tablet horizontal */
+    .footer-row {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .footer-col {
+      flex: 1;
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 0.9rem; /* 👈 Achicamos toda la columna de footer */
+    }
+  
+    footer {
+      padding: 1.5rem 2rem;
+    }
+  
+    footer .list-inline {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    footer .list-inline-item {
+      margin: 0.5rem;
+    }
+  
+    /* Achicar texto de datos personales */
+    .copy h2 {
+      font-size: 0.8rem; /* 👈 MÁS chico todavía */
+      font-weight: 400;
+      margin: 0;
+      opacity: 0.7; /* Opcional: más suave */
+    }
+    nav ul {
+      display: flex; /* 👈 Aseguramos que se vea */
+      flex-direction: column; /* 👈 Uno abajo del otro */
+      align-items: center; /* 👈 Centrado horizontal */
+      justify-content: center;
+      gap: 1rem; /* 👈 Separación entre links */
+      background: rgba(0, 0, 0, 0.8); /* 👈 Fondo oscuro para tablets */
+      width: 100%;
+      padding: 1rem 0;
+      position: absolute; /* Opcional: si querés que quede fijo */
+      top: 60px; /* Debajo del nav */
+      left: 0;
+      z-index: 1001;
+    }
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 0; /* Más espacio vertical */
+    }
+  
+    nav ul li a {
+      font-size: 1.2rem; /* 👈 Un poquito más grande en tablet */
+      color: #ffffff;
+    }
+  
+    nav ul li a:hover {
+      color: #e58fff;
+      border-bottom: 2px solid #ded0eb; /* 👈 Línea debajo al hacer hover */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    /* Container más grande */
+    .container {
+      max-width: 1200px; /* Más ancho en monitores */
+      padding: 4rem 2rem;
+    }
+  
+    /* Secciones más amplias */
+    section {
+      padding: 3rem 8rem;
+      font-size: 1.2rem;
+    }
+  
+    /* Títulos más grandes */
+    h1, .titu, .titulos {
+      font-size: 3rem; /* Más grande en escritorio */
+      text-align: center;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    p, li, a {
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
+  
+    /* Cards de proyectos */
+    .fondo-proyectos .row {
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .card {
+      width: calc(33.33% - 2rem); /* 3 columnas de tarjetas */
+      min-height: 500px;
+    }
+  
+    /* Imagenes más grandes */
+    img {
+      width: 70%;
+      border-radius: 20px;
+    }
+  
+    /* Footer organizado */
+    .footer-row {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .footer-col {
+      margin: 0 1rem;
+    }
+  
+    .copy h2 {
+      font-size: 1rem;
+    }
+  
+    /* Menú navegación horizontal */
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      background: transparent;
+      position: static;
+      padding: 0;
+    }
+  
+    nav ul li a {
+      font-size: 1.1rem;
+    }
+  }
+   
+  

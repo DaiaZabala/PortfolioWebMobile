@@ -138,6 +138,7 @@ nav {
   justify-content: center; /* Centra los elementos hijos */
   align-items: center;
   gap: 2rem; /* Espacio entre cada enlace */
+  flex-wrap: wrap;
 }
 
 nav .logo {
@@ -191,6 +192,46 @@ img {
   border-radius: 50%;
   margin-top: 2rem;
 }
+/*SOBRE MI*/
+.mifoto {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0; /* Ya no centrada */
+}
+.sobreMi-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.sobreMi-col {
+  flex: 0 0 auto;
+}
+
+.sobreMi-texto {
+  flex: 1 1 0;
+  text-align: justify;
+}
+
+.mifoto {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
 /*Cards Proyectos*/
 .card {
   border-radius: 10px;

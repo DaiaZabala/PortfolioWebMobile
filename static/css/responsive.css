@@ -140,15 +140,33 @@
       border-radius: 20px;
     }
   
-    /* Footer */
-    .footer-row {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .footer-col {
-      margin-bottom: 1rem;
-    }
+footer .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .col {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  footer .col ul {
+    padding: 0;
+  }
+
+  footer h3 {
+    margin-bottom: 10px;
+  }
+
+  footer .d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer img {
+    margin: 5px;
+  }
   
     /* Botón hamburguesa */
     #menu-toggle {
@@ -169,22 +187,85 @@
     #nav-links.show {
       display: flex;
     }
+    nav {
+      position: relative;
+    }
+  
+    #menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: white; /* o el color que uses */
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 1000;
+    }
+  
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: #222; /* o el color de fondo del nav */
+      position: absolute;
+      top: 50px; /* debajo del botón hamburguesa */
+      left: 0;
+      padding: 20px 0;
+    }
+  
+    #nav-links.active {
+      display: flex;
+    }
+  
+    nav .col, nav .col-sm-2 {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav li {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+    nav a {
+      color: white; /* o tu color */
+      text-decoration: none;
+      font-size: 18px;
+    }
+  
+    nav .boton {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #555; /* color del botón */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
   }
   
   @media (min-width: 768px) and (max-width: 1024px) {
-    /* Footer adaptado para tablet horizontal */
-    .footer-row {
+    /* FOOTER adaptado para tablet */
+    footer .row {
       flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      text-align: center;
     }
   
-    .footer-col {
+    footer .col {
       flex: 1;
+      width: auto !important;
       margin-bottom: 0;
-      text-align: center;
-      font-size: 0.9rem; /* 👈 Achicamos toda la columna de footer */
+      font-size: 0.9rem;
     }
   
     footer {
@@ -194,51 +275,90 @@
     footer .list-inline {
       flex-wrap: wrap;
       justify-content: center;
+      padding: 0;
+      margin: 0;
     }
   
     footer .list-inline-item {
       margin: 0.5rem;
     }
   
-    /* Achicar texto de datos personales */
-    .copy h2 {
-      font-size: 0.8rem; /* 👈 MÁS chico todavía */
-      font-weight: 400;
-      margin: 0;
-      opacity: 0.7; /* Opcional: más suave */
+    footer h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-    nav ul {
-      display: flex; /* 👈 Aseguramos que se vea */
-      flex-direction: column; /* 👈 Uno abajo del otro */
-      align-items: center; /* 👈 Centrado horizontal */
+  
+    footer p {
+      font-size: 0.9rem;
+    }
+  
+    footer img {
+      width: 25px; /* Más pequeños los íconos */
+    }
+  
+    nav {
+      display: flex;
+      align-items: center; /* Centra verticalmente el contenido */
       justify-content: center;
-      gap: 1rem; /* 👈 Separación entre links */
-      background: rgba(0, 0, 0, 0.8); /* 👈 Fondo oscuro para tablets */
-      width: 100%;
-      padding: 1rem 0;
-      position: absolute; /* Opcional: si querés que quede fijo */
-      top: 60px; /* Debajo del nav */
-      left: 0;
-      z-index: 1001;
+      height: 70px; /* Altura más controlada */
+      padding: 0 1rem;
+      background-color: #1f0035; /* O el color que uses */
+      position: relative;
+      z-index: 1000;
     }
-  
-    nav ul li {
+    
+    nav #menu-toggle {
+      display: none; /* Ocultar botón hamburguesa */
+    }
+    
+    nav #nav-links {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 0.5rem;
       width: 100%;
+    }
+    
+    nav .col, nav .col-sm-2 {
+      flex: 0 0 auto;
+      width: auto;
       text-align: center;
-      padding: 0.75rem 0; /* Más espacio vertical */
     }
-  
-    nav ul li a {
-      font-size: 1.2rem; /* 👈 Un poquito más grande en tablet */
-      color: #ffffff;
+    
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 0;
     }
-  
-    nav ul li a:hover {
+    
+    nav ul li {
+      list-style: none;
+    }
+    
+    nav a {
+      font-size: 0.95rem; /* Más pequeño para que todo entre */
+      padding: 4px 6px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
       color: #e58fff;
-      border-bottom: 2px solid #ded0eb; /* 👈 Línea debajo al hacer hover */
+      border-bottom: 2px solid #ded0eb;
     }
-  }
-  
+    
+    nav .boton {
+      font-size: 0.85rem;
+      padding: 6px 10px;
+      background-color: #e58fff;
+      color: #1f0035;
+      border-radius: 5px;
+      white-space: nowrap; /* No se corta el botón */
+    }
+  }  
   @media (min-width: 1025px) {
     /* Container más grande */
     .container {
@@ -267,37 +387,110 @@
       line-height: 1.8;
     }
   
-    /* Cards de proyectos */
+    .fondo-proyectos {
+      width: 95%;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 20px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
     .fondo-proyectos .row {
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
+      display: flex;
+      flex-direction: column; /* 👈 Apilar en vertical */
+      gap: 1rem;
+      margin: 0;
+      width: 100%;
     }
-  
+    
     .card {
-      width: calc(33.33% - 2rem); /* 3 columnas de tarjetas */
-      min-height: 500px;
+      width: 100%;
+      min-height: auto;
+      padding: 1rem;
+      box-sizing: border-box;
     }
-  
     /* Imagenes más grandes */
     img {
       width: 70%;
       border-radius: 20px;
     }
+    footer .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: nowrap;
+      text-align: left;
+    }
   
-    /* Footer organizado */
-    .footer-row {
-      flex-direction: row;
-      justify-content: center;
+    footer .col {
+      flex: 1;
+      min-width: 200px;
+      padding: 0 1rem;
+    }
+  
+    footer h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+  
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    footer ul li {
+      margin-bottom: 0.5rem;
+    }
+  
+    footer p,
+    footer a {
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  
+    footer .list-inline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-left: 0;
+    }
+  
+    footer .list-inline-item {
+      margin: 0;
+    }
+  
+    /* Sección de redes */
+  
+  
+    footer .col.d-flex a {
+      display: inline-block;
+    }
+  
+    footer .col.d-flex {
+      flex-direction: row !important;
+      flex-wrap: wrap;
       align-items: center;
+      gap: 1rem;
+    }
+    
+    footer .col.d-flex img {
+      width: 30px;
+      height: 30px;
     }
   
-    .footer-col {
-      margin: 0 1rem;
-    }
-  
+    /* Copyright */
     .copy h2 {
       font-size: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+      opacity: 0.6;
     }
   
     /* Menú navegación horizontal */

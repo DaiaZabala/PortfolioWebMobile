@@ -199,7 +199,7 @@ img {
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0; /* Ya no centrada */
+  margin: 0 auto;
 }
 .sobreMi-row {
   display: flex;
@@ -218,15 +218,6 @@ img {
 .sobreMi-texto {
   flex: 1 1 0;
   text-align: justify;
-}
-
-.mifoto {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
 }
 
 

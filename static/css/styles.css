@@ -1,6 +1,7 @@
 section{
     height: 250px !important;
 }
+
 #hero {
     min-height: 100vh; /* ocupa al menos una pantalla completa */
     display: flex;
@@ -8,9 +9,30 @@ section{
     position: relative;
     z-index: 1;
   }
+
   #Proyectos {
     position: relative;
     z-index: 0;
     margin-top: 5rem; /* espacio desde el héroe */
   }
-    
+
+  .carousel-indicators {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .carousel-indicators li {
+    background-color:rebeccapurple;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 2px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #000;
+  }
+
+  

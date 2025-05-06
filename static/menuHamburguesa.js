@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
       bsCollapse.hide();
     }
   });
+  
+
+// Esperar 20 segundos (20,000 milisegundos)
+setTimeout(() => {
+    const carousels = document.querySelectorAll('.carousel');
+    console.log(`Carouseles encontrados: ${carousels.length}`); // Verificá que diga 3
+
+    carousels.forEach(carrusel => {
+      const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carrusel);
+      carouselInstance.pause(); // Pausa el movimiento automático
+    });
+  }, 20000);
+  
+
 
   });
   

@@ -7,46 +7,48 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/styles.css">
-  <link rel="stylesheet" href="/static/css/index.css">
+  <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+    <!-- Fuente Sora -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet">
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon.ico"/>
   <title>Portfolio- Zabala Daiana</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-body-tertiary">
-
-  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> -->
+  <nav class="navbar navbar-expand-md bg-light fixed-top shadow">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- <a class="navbar-brand" href="#">Menu</a> -->
+  
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#hero">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#sobreMi">Sobre mí</a>
+            <a class="nav-link active" href="#sobreMi">Sobre mí</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Proyectos">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Cards">Cards</a>
+            <a class="nav-link" href="#Lenguajes">Lenguajes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Contacto">Contacto</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <button class="btn btn-outline-success" type="submit">IR A GITHUT</button>
+          <a href="https://github.com/DaiaZabala" target="_blank" class="btn btn-outline-success">Ir a GitHub</a>
         </form>
       </div>
     </div>
   </nav>
+  
   <section id="hero" class="hero py-5">
     <div class="container">
       <div class="row align-items-center">
@@ -68,6 +70,78 @@
         </div>
       </div>
 
+    </div>
+  </section>
+  <hr class="my-4" />
+
+  <section id="sobreMi" class="container py-5">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-4 text-center">
+        <h2 class="h4 mb-4">Sobre Mí</h2>
+        <!-- <img src="/static/img/MiFoto.jpg" class="rounded-5" alt="..."> -->
+        <img src="/static/img/MiFoto.jpg" alt="Mi foto" class="img-thumbnail rounded-4" />
+      </div>
+      <div class="col-md-8">
+        <p>
+          Mi nombre es <strong>Daiana Zabala</strong>, soy estudiante de la carrera de Licenciatura en Sistemas de
+          Información, en la Universidad Nacional del Nordeste en la provincia de Corrientes.
+        </p>
+        <p>
+          Tengo experiencia en el <strong>Desarrollo Full Stack</strong>, participando en diversos proyectos tanto
+          grupales como individuales, utilizando distintos lenguajes de programación. Me considero una persona
+          responsable, proactiva y con una gran motivación por adquirir nuevos conocimientos de forma constante.
+        </p>
+        <p>
+          Mi pasión por seguir desarrollándome profesionalmente en el área me ha llevado a complementar mi formación
+          universitaria con el curso de <strong>Web Designer</strong>, el cual estoy realizando actualmente. Además, me
+          encuentro en búsqueda continua de nuevas oportunidades de capacitación que me permitan crecer personal y
+          profesionalmente.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="h4 text-center mb-4">Estudios</h2>
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h5 class="text-muted">2022 - Presente</h5>
+          <p>Licenciatura en Sistemas de Información. UNNE (Universidad Nacional del Nordeste).</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">Mayo 2023 - Agosto 2024</h5>
+          <p>
+            Plan Argentina Programa 4.0. <strong>Front End y Back End: PHP, Laravel + Vue.js</strong>. Dictado por TELCO
+            (Corrientes Telecomunicaciones) en colaboración con la Universidad Nacional del Nordeste.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h5 class="text-muted">Febrero - Julio 2024</h5>
+          <p>Curso de <strong>Programación Full Stack Python</strong>. Programa de capacitación Codo a Codo.</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">Junio 2022</h5>
+          <p>
+            Plan Argentina Programa - Etapa Sé Programar. <strong>Programación Web Full Stack HTML-CSS
+              FRONT/BACKEND</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="text-muted">Septiembre 2022 - Marzo 2023</h5>
+          <p><strong>Robótica Arduino</strong>. A distancia. Fundación Adveniat-Bots. Avalado por la UTN.</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">2018</h5>
+          <p><strong>Professional Testing Master</strong>. Modalidad a distancia. Dictado por la UTN - Facultad Regional
+            Bs. As.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -250,58 +324,35 @@
           <h3>Escribime y en breve me pondré en contacto con vos</h3>
           <form id="formulario-contacto">
             <p class="campo-formulario">
-              <label for="nombre" class="colocar_nombre"
-                >Nombre:
+              <label for="nombre" class="colocar_nombre">Nombre:
                 <span class="obligatorio-contacto">*</span>
               </label>
-              <input
-                type="text"
-                name="introducir_nombre"
-                id="nombre"
-                required
-                placeholder="Escribe tu nombre"
-              />
+              <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre" />
             </p>
             <p class="campo-formulario">
-              <label for="email" class="colocar_email"
-                >Email:
+              <label for="email" class="colocar_email">Email:
                 <span class="obligatorio-contacto">*</span>
               </label>
-              <input
-                type="email"
-                name="introducir_email"
-                id="email"
-                required
-                placeholder="Escribe tu Email"
-              />
+              <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email" />
             </p>
             <p class="campo-formulario">
-              <label for="mensaje" class="colocar_mensaje"
-                >Mensaje:
+              <label for="mensaje" class="colocar_mensaje">Mensaje:
                 <span class="obligatorio-contacto">*</span>
               </label>
-              <textarea
-                name="introducir_mensaje"
-                class="texto_mensaje"
-                id="mensaje"
-                required
-                placeholder="Deja aquí tu comentario..."
-              ></textarea>
+              <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required
+                placeholder="Deja aquí tu comentario..."></textarea>
             </p>
             <p class="aviso">
               <span class="obligatorio-contacto">*</span> Los campos son
               obligatorios.
             </p>
             <button type="submit" class="boton">Enviar</button>
-            <div
-              id="mensaje-enviado"
-              style="
+            <div id="mensaje-enviado" style="
                 display: none;
                 color: #8e44ad;
                 margin-top: 10px;
                 font-size: 20px;
-              "
-            >
+              ">
               ¡Mensaje enviado correctamente! 🚀
             </div>
           </form>
@@ -311,74 +362,82 @@
   </section>
 
   <footer class="bg-dark text-light py-4">
-    <div class="row align-items-center">
-      
-      <!-- Columna Izquierda -->
-      <div class="col text-center text-md-start" style="width: 20%;">
-        <ul class="list-unstyled small">
-          <h3>Datos Parsonales:</h3>
+    <div class="container">
+      <div class="row">
+
+        <!-- Columna Izquierda -->
+        <div class="col-md-3 text-center text-md-start">
+          <ul class="list-unstyled small">
+            <h3>Datos Personales:</h3>
+            <br>
+            <li class="mb-2">
+              <p class="mb-0"><span>📍</span> Corrientes, Argentina</p>
+            </li>
+            <li class="mb-2">
+              <p class="mb-0"><span>✉️</span> daiana.azabala@gmail.com</p>
+            </li>
+            <li class="mb-2">
+              <p class="mb-0"><span>📞</span> 03794 15924276</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna del Medio -->
+        <div class="col-md-6 text-center">
+          <h3>Navegación</h3>
           <br>
-          <li class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-            <p class="mb-0"><span>📍</span> Corrientes, Argentina</p>
-          </li>
-          <li class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-            <p class="mb-0"><span>✉️</span> daiana.azabala@gmail.com</p>
-          </li>
-          <li class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-            <p class="mb-0"><span>📞</span> 03794 15924276</p>
-          </li>
-        </ul>
+          <ul class="list-inline small">
+            <li class="list-inline-item mx-2">
+              <a href="#hero" class="text-light text-decoration-none">Inicio</a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a href="#sobreMi" class="text-light text-decoration-none">Sobre Mi</a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a href="#Lenguajes" class="text-light text-decoration-none">Lenguajes</a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a href="#Proyectos" class="text-light text-decoration-none">Proyectos</a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a href="#Contacto" class="text-light text-decoration-none">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="col-md-3 d-flex justify-content-center justify-content-md-end gap-2">
+          <h3>Redes:</h3>
+          <br>
+          <a href="https://wa.me/549379415924276" target="_blank" class="text-light">
+            <img src="/static/img/whatsapp.png" alt="WhatsApp" style="width: 30px;">
+          </a>
+          <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" class="text-light">
+            <img src="/static/img/linkedin (1).png" alt="LinkedIn" style="width: 30px;">
+          </a>
+          <a href="https://github.com/DaiaZabala" target="_blank" class="text-light">
+            <img src="/static/img/github (1).png" alt="GitHub" style="width: 30px;">
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daiana.azabala@gmail.com" target="_blank"
+            class="text-light">
+            <img src="/static/img/correo (1).png" alt="Correo" style="width: 30px;">
+          </a>
+        </div>
+
       </div>
-  
-      <!-- Columna del Medio -->
-      <div class="col text-center" style="width: 80%;">
-        <h3>Navegación</h3>
-        <br>
-        <ul class="list-inline small">
-          <li class="list-inline-item mx-2">
-            <a href="#inicio" class="text-light text-decoration-none">Inicio</a>
-          </li>
-          <li class="list-inline-item mx-2">
-            <a href="#sobreMi" class="text-light text-decoration-none">Sobre Mi</a>
-          </li>
-          <li class="list-inline-item mx-2">
-            <a href="#Lenguajes" class="text-light text-decoration-none">Lenguajes</a>
-          </li>
-          <li class="list-inline-item mx-2">
-            <a href="#Proyectos" class="text-light text-decoration-none">Proyectos</a>
-          </li>
-          <li class="list-inline-item mx-2">
-            <a href="#Contacto" class="text-light text-decoration-none">Contacto</a>
-          </li>
-        </ul>
+
+      <hr class="linea-suave" />
+
+      <div class="copy text-center">
+        <blockquote class="blockquote">
+          <p>&copy; 2025 Daiana Zabala. Todos los derechos reservados.</p>
+        </blockquote>
+
       </div>
-  
-      <!-- Columna Derecha -->
-      <div class="col d-flex justify-content-center justify-content-md-end gap-2" style="width: 20%;">
-        <h3>Redes:</h3> 
-        <br>
-        <a href="https://wa.me/549379415924276" target="_blank" class="text-light">
-          <img src="/static/img/whatsapp.png" alt="WhatsApp" style="width: 30px;">
-        </a>
-        <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" class="text-light">
-          <img src="/static/img/linkedin (1).png" alt="LinkedIn" style="width: 30px;">
-        </a>
-        <a href="https://github.com/DaiaZabala" target="_blank" class="text-light">
-          <img src="/static/img/github (1).png" alt="GitHub" style="width: 30px;">
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daiana.azabala@gmail.com" target="_blank" class="text-light">
-          <img src="/static/img/correo (1).png" alt="Correo" style="width: 30px;">
-        </a>
-      </div>
-  
+
     </div>
   </footer>
-  
-       <hr class="linea-suave" />
-    <div class="copy" style="text-align: center;">
-      <h2>&copy; 2025 Daiana Zabala. Todos los derechos reservados.</h2>
-    </div>
-  </footer>
+
   <script>
     document
       .getElementById("formulario-contacto")
@@ -408,7 +467,7 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
    -->
-   <script src="/static/menuHamburguesa.js"></script>
+  <script src="/static/menuHamburguesa.js"></script>
 
 
 

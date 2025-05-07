@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-// Esperar 20 segundos (20,000 milisegundos)
+// Esperar 10 segundos (10,000 milisegundos)
 setTimeout(() => {
     const carousels = document.querySelectorAll('.carousel');
     console.log(`Carouseles encontrados: ${carousels.length}`); // Verificá que diga 3
@@ -29,7 +29,7 @@ setTimeout(() => {
       const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carrusel);
       carouselInstance.pause(); // Pausa el movimiento automático
     });
-  }, 20000);
+  }, 10000);
   
 
 

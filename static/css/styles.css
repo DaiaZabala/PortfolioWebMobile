@@ -5,7 +5,7 @@ section {
 }
 
 body {
-  padding-top: 70px; 
+  padding-top: 70px;
   font-size: 22px;
   background: radial-gradient(circle at top right, #5825c1, #000000);
   color: black;
@@ -16,7 +16,6 @@ body {
 }
 
 #hero {
-  
   padding: 5rem 1rem;
   color: #f5f5ff;
   min-height: 100vh;
@@ -54,7 +53,7 @@ body {
   text-indent: 1em;
 }
 
-.btn-morado{
+.btn-morado {
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -69,8 +68,7 @@ body {
   text-align: center;
 }
 
-.btn-morado:hover
-{
+.btn-morado:hover {
   transform: scale(1.05);
 }
 
@@ -124,6 +122,27 @@ body {
 
 .carousel-indicators .active {
   background-color: #000;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0L1.09 1.41 4.67 5 1.09 8.59 2.5 10l6-6z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L6.91 1.41 3.33 5l3.58 3.59L5.5 10 0 5z'/%3E%3C/svg%3E");
+}
+
+/*Agrandar Carrusel*/
+.carousel-grande {
+  max-width: 100%; /* Ajustá el ancho según necesites */
+  height: 300px; /* 👈 Altura del carrusel */
+  margin-top: 1px;
+  overflow: hidden; /* Evita que se desborde si la imagen es muy grande */
+}
+
+.carousel-grande img {
+  height: 300px;
+  /* width: 100%; */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
 }
 
 /* Formulario */
@@ -230,7 +249,7 @@ footer .col.text-center.text-md-start {
 }
 
 .card-img-top {
-  width: 80px; 
+  width: 80px;
   height: auto;
   margin: 0 auto; /* centra horizontalmente la imagen */
   transition: transform 0.3s ease;
@@ -248,29 +267,29 @@ footer .col.text-center.text-md-start {
 }
 .bg-gradient {
   background: radial-gradient(circle at top right, #3c1d6e, #581b98);
-  color: white; 
+  color: white;
 }
 .linea-suave {
   border: none;
   height: 2px; /* Grosor de la línea */
   background: linear-gradient(to right, #8e44ad, #3498db);
-  margin: 10px 0; 
-  opacity: 0.7; 
+  margin: 10px 0;
+  opacity: 0.7;
   border-radius: 5px;
 }
 
 #sobreMi h5 {
   display: inline-block;
   padding: 6px 12px;
-  border: 2px solid #c8a2f7; 
+  border: 2px solid #c8a2f7;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 500;
-  color: #ffffff; 
+  color: #ffffff;
   background-color: transparent;
   margin-bottom: 10px;
 }
-.custom-navbar{
+.custom-navbar {
   background: linear-gradient(to right, #3c1d6e, #581b98);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -301,15 +320,15 @@ footer .col.text-center.text-md-start {
   transform: scale(1.2);
 }
 .text-start {
-  font-size: 28px; 
+  font-size: 28px;
 }
 /*PARA QUE NO SE ROMPA EL HERO*/
 @media (max-width: 768px) {
   .logo {
     display: none;
   }
-   /* Hace que la columna de texto use el 100% del ancho */
-   #hero .col-md-6 {
+  /* Hace que la columna de texto use el 100% del ancho */
+  #hero .col-md-6 {
     width: 100% !important;
     flex: 0 0 100% !important;
     max-width: 100% !important;
@@ -339,11 +358,11 @@ footer .col.text-center.text-md-start {
   padding: 12px 20px;
   color: #000000;
   border: 2px solid grey;
-  white-space: normal;          /* Permitir salto de línea */
-  word-wrap: break-word;        /* Romper palabras largas si es necesario */
+  white-space: normal; /* Permitir salto de línea */
+  word-wrap: break-word; /* Romper palabras largas si es necesario */
   text-align: center;
   display: inline-block;
-  max-width: 100%;              /* Que no se pase del ancho disponible */
+  max-width: 100%; /* Que no se pase del ancho disponible */
   box-sizing: border-box;
 }
 
@@ -352,7 +371,7 @@ footer .col.text-center.text-md-start {
   border-radius: 8px;
   border: 2px solid grey;
   padding: 12px 20px;
-  transform: scale(1.05);       /* Ligero efecto sin romper layout */
+  transform: scale(1.05); /* Ligero efecto sin romper layout */
   text-align: center;
 }
 a {
@@ -361,14 +380,16 @@ a {
   font-size: 16px;
   padding: 10px;
   white-space: normal; /* Asegura que el texto puede hacer salto de línea */
-  word-wrap: break-word;        /* Romper palabras largas si es necesario */
- 
+  word-wrap: break-word; /* Romper palabras largas si es necesario */
 }
 
-a:hover{
+a:hover {
   color: #e58fff;
   border-radius: 8px;
   border: 2px solid grey;
   padding: 10px 20px;
   transform: scale(1.05);
+}
+p {
+  text-indent: 1.5em;
 }

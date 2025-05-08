@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/styles.css">
-  <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
   <!-- Fuente Sora -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon.ico" />
@@ -55,18 +54,18 @@
         <!-- Columna de texto -->
         <div class="col-md-6 text-light">
           <h1 class="display-4 fw-bold" style="color: #e58fff;">Hola, soy Daiana Zabala</h1>
-          <h2 class="h4 text-white">Full Stack Developer</h2>
+          <h2 class="subtitulo">Full Stack Developer</h2>
+
           <p style="color: #ded0eb; text-align: justify;">
             Soy estudiante de la Carrera en Licenciatura en Sistemas en la Universidad Nacional del Nordeste. Me gusta
             mucho el desarrollo de software y actualmente estoy realizando el curso de Web Designer, dentro del programa
             Muni Joven-Academia IT.
           </p>
-          <a href="/static/CurriculumZabalaDaiana.pdf" class="btn btn-light custom-github-btn mt-3" download>
+          <a href="/static/CurriculumZabalaDaiana.pdf" class="btn-morado" download>
             Descargar CV
           </a>
+          
         </div>
-  
-        <!-- Columna de imagen -->
         <div class="col-md-6 text-center mt-4 mt-md-0">
           <img src="/static/img/logo.png" alt="logo" class="img-fluid rounded-circle" style="width: 70%;">
         </div>
@@ -84,7 +83,7 @@
       <div class="col-md-8">
         <p>
           Mi nombre es <strong>Daiana Zabala</strong>, soy estudiante de la carrera de Licenciatura en Sistemas de
-          Información, en la Universidad Nacional del Nordeste en la provincia de Corrientes.
+          Información, en la Universidad Nacional del Nordeste en la provincia de <strong>Corrientes</strong>.
         </p>
         <p>
           Tengo experiencia en el <strong>Desarrollo Full Stack</strong>, participando en diversos proyectos tanto
@@ -178,12 +177,10 @@
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <!-- <span class="visually-hidden">Anterior</span> -->
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <!-- <span class="visually-hidden">Siguiente</span> -->
               </button>
             </div>
             <div class="card-body">
@@ -201,7 +198,6 @@
             </div>
           </div>
         </div>
-        <!-- Podés repetir este bloque para más cards -->
         <div class="col-md-4 mb-4">
           <div class="card" style="width: 100%;">
             <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -286,12 +282,10 @@
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <!-- <span class="visually-hidden">Anterior</span> -->
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <!-- <span class="visually-hidden">Siguiente</span> -->
               </button>
             </div>
             <div class="card-body">
@@ -438,6 +432,43 @@
           </div>
         </div>
       </div>
+      <div class="row mb-5 justify-content-center">
+
+        <h4 class="text-start">🛠️ Otros</h4>
+
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0 shadow h-100">
+            <img src="/static/img/arduino.png" class="card-img-top icono" alt="Arduino">
+            <div class="card-body">
+              <h5 class="card-title">Arduino</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0 shadow h-100">
+            <img src="/static/img/github.png" class="card-img-top icono" alt="GitHub">
+            <div class="card-body">
+              <h5 class="card-title">GitHub</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0 shadow h-100">
+            <img src="/static/img/git.png" class="card-img-top icono" alt="Git">
+            <div class="card-body">
+              <h5 class="card-title">Git</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card border-0 shadow h-100">
+            <img src="/static/img/sourcetree.png" class="card-img-top icono" alt="Sourcetree">
+            <div class="card-body">
+              <h5 class="card-title">Sourcetree</h5>
+            </div>
+          </div>
+        </div>
+
     </div>
   </section>
   <hr class="linea-suave" />
@@ -471,9 +502,10 @@
               <span class="obligatorio-contacto">*</span> Los campos son
               obligatorios.
             </p>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn-morado">
               Enviar
             </button>
+            
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -489,7 +521,7 @@
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn-morado" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -533,10 +565,10 @@
               <a href="#sobreMi" class="text-light text-decoration-none">Sobre Mi</a>
             </li>
             <li class="list-inline-item mx-2">
-              <a href="#Lenguajes" class="text-light text-decoration-none">Lenguajes</a>
+              <a href="#Proyectos" class="text-light text-decoration-none">Proyectos</a>
             </li>
             <li class="list-inline-item mx-2">
-              <a href="#Proyectos" class="text-light text-decoration-none">Proyectos</a>
+              <a href="#Lenguajes" class="text-light text-decoration-none">Lenguajes</a>
             </li>
             <li class="list-inline-item mx-2">
               <a href="#Contacto" class="text-light text-decoration-none">Contacto</a>
@@ -548,17 +580,17 @@
         <div class="col-md-3 d-flex justify-content-center justify-content-md-end gap-2">
           <h3>Redes:</h3>
           <br>
-          <a href="https://wa.me/379415924276" target="_blank" class="text-light">
+          <a href="https://wa.me/379415924276" target="_blank" class="redes text-light">
             <img src="/static/img/whatsapp.png" alt="WhatsApp" style="width: 30px;">
           </a>
-          <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" class="text-light">
+          <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" class="redes text-light">
             <img src="/static/img/linkedin (1).png" alt="LinkedIn" style="width: 30px;">
           </a>
-          <a href="https://github.com/DaiaZabala" target="_blank" class="text-light">
+          <a href="https://github.com/DaiaZabala" target="_blank" class="redes text-light">
             <img src="/static/img/github (1).png" alt="GitHub" style="width: 30px;">
           </a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daiana.azabala@gmail.com" target="_blank"
-            class="text-light">
+            class="redes text-light">
             <img src="/static/img/correo (1).png" alt="Correo" style="width: 30px;">
           </a>
         </div>

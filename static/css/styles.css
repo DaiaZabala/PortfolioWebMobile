@@ -5,7 +5,7 @@ section {
 }
 
 body {
-  padding-top: 70px; /* Ajustar según altura de tu navbar */
+  padding-top: 70px; 
   font-size: 22px;
   background: radial-gradient(circle at top right, #5825c1, #000000);
   color: black;
@@ -16,12 +16,102 @@ body {
 }
 
 #hero {
+  
+  padding: 5rem 1rem;
+  color: #f5f5ff;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  position: relative;
-  color: white;
 }
+
+#hero .container {
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e58fff;
+}
+
+#hero h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #eae6f2;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ded0eb;
+  text-align: justify;
+  text-indent: 1em;
+}
+
+.btn-morado{
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #9914c1, #e58fff);
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-morado:hover
+{
+  transform: scale(1.05);
+}
+
+#hero img {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+#hero .subtitulo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #eae6f2;
+}
+/*PARA QUE NO SE ROMPA EL HERO*/
+@media (max-width: 767px) {
+  #hero .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  #hero .subtitulo {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero .subtitulo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero .subtitulo {
+    font-size: 1.1rem;
+  }
+}
+
+
+
 #sobreMi h2 {
   font-size: 3rem;
   font-weight: 600;
@@ -166,14 +256,14 @@ footer .col.text-center.text-md-start {
 }
 
 .card-img-top {
-  width: 80px; /* o el tamaño que prefieras */
+  width: 80px; 
   height: auto;
   margin: 0 auto; /* centra horizontalmente la imagen */
   transition: transform 0.3s ease;
 }
 
 .card:hover .card-img-top {
-  transform: scale(1.1); /* efecto sutil al pasar el mouse */
+  transform: scale(1.1);
 }
 .icono {
   width: 80px;
@@ -184,7 +274,7 @@ footer .col.text-center.text-md-start {
 }
 .bg-gradient {
   background: radial-gradient(circle at top right, #3c1d6e, #581b98);
-  color: white; /* <-- cambio aquí */
+  color: white; 
 }
 .linea-suave {
   border: none;
@@ -198,17 +288,16 @@ footer .col.text-center.text-md-start {
 #sobreMi h5 {
   display: inline-block;
   padding: 6px 12px;
-  border: 2px solid #c8a2f7; /* O el color que estés usando (lavanda suave) */
+  border: 2px solid #c8a2f7; 
   border-radius: 12px;
   font-size: 16px;
   font-weight: 500;
-  color: #ffffff; /* o el que esté en tu sitio */
+  color: #ffffff; 
   background-color: transparent;
   margin-bottom: 10px;
 }
 .custom-navbar{
   background: linear-gradient(to right, #3c1d6e, #581b98);
-  /* mantené el resto si querés el blur */
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   color: white;
@@ -228,4 +317,15 @@ footer .col.text-center.text-md-start {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+/*hover footer*/
+.navbar-nav .nav-link:hover,
+.list-inline-item a:hover {
+  color: #e58fff !important;
+}
 
+.redes:hover img {
+  transform: scale(1.2);
+}
+.text-start {
+  font-size: 28px; 
+}

@@ -85,32 +85,6 @@ body {
   font-weight: 600;
   color: #eae6f2;
 }
-/*PARA QUE NO SE ROMPA EL HERO*/
-@media (max-width: 767px) {
-  #hero .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-@media (max-width: 992px) {
-  #hero .subtitulo {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero .subtitulo {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  #hero .subtitulo {
-    font-size: 1.1rem;
-  }
-}
-
-
 
 #sobreMi h2 {
   font-size: 3rem;
@@ -279,10 +253,10 @@ footer .col.text-center.text-md-start {
 .linea-suave {
   border: none;
   height: 2px; /* Grosor de la línea */
-  background: linear-gradient(to right, #8e44ad, #3498db); /* Degradado lindo */
-  margin: 10px 0; /* Separación arriba y abajo */
-  opacity: 0.7; /* Un poco de transparencia */
-  border-radius: 5px; /* Bordes redondeados */
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  margin: 10px 0; 
+  opacity: 0.7; 
+  border-radius: 5px;
 }
 
 #sobreMi h5 {
@@ -313,10 +287,10 @@ footer .col.text-center.text-md-start {
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.5); /* borde claro */
 }
-
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
 /*hover footer*/
 .navbar-nav .nav-link:hover,
 .list-inline-item a:hover {
@@ -328,4 +302,73 @@ footer .col.text-center.text-md-start {
 }
 .text-start {
   font-size: 28px; 
+}
+/*PARA QUE NO SE ROMPA EL HERO*/
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+   /* Hace que la columna de texto use el 100% del ancho */
+   #hero .col-md-6 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  #hero h1,
+  #hero h2,
+  #hero p,
+  #hero a {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  #hero .subtitulo {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero .subtitulo {
+    font-size: 1.1rem;
+  }
+}
+/*Cards*/
+.btn-outline-light {
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #000000;
+  border: 2px solid grey;
+  white-space: normal;          /* Permitir salto de línea */
+  word-wrap: break-word;        /* Romper palabras largas si es necesario */
+  text-align: center;
+  display: inline-block;
+  max-width: 100%;              /* Que no se pase del ancho disponible */
+  box-sizing: border-box;
+}
+
+.btn-outline-light:hover {
+  color: #e58fff;
+  border-radius: 8px;
+  border: 2px solid grey;
+  padding: 12px 20px;
+  transform: scale(1.05);       /* Ligero efecto sin romper layout */
+  text-align: center;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  white-space: normal; /* Asegura que el texto puede hacer salto de línea */
+  word-wrap: break-word;        /* Romper palabras largas si es necesario */
+ 
+}
+
+a:hover{
+  color: #e58fff;
+  border-radius: 8px;
+  border: 2px solid grey;
+  padding: 10px 20px;
+  transform: scale(1.05);
 }

@@ -43,6 +43,36 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.modal-body {
+  display: none;
+  color: #8e44ad;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, #3c1d6e, #581b98);
+  color: white;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.card-img-top {
+  width: 50px;         /* o el tamaño que prefieras */
+  height: auto;
+  margin: 0 auto;      /* centra horizontalmente la imagen */
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);  /* efecto sutil al pasar el mouse */
+}
+
+
+
 /*Footer*/
 
 .footer-row {

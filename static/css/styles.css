@@ -1,11 +1,16 @@
-
 /* Eliminar height fijo de secciones */
 section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 body {
   padding-top: 70px; /* Ajustar según altura de tu navbar */
+  font-size: 22px;
+}
+.nav-link:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
 }
 
 #hero {
@@ -139,4 +144,32 @@ body {
 
 footer .col.text-center.text-md-start {
   margin-top: 30px;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, #3c1d6e, #581b98);
+  color: black;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.card-img-top {
+  width: 80px; /* o el tamaño que prefieras */
+  height: auto;
+  margin: 0 auto; /* centra horizontalmente la imagen */
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* efecto sutil al pasar el mouse */
+}
+.icono {
+  width: 80px;
+  height: auto;
+  margin: 20px auto 0;
+  display: block;
+  transition: transform 0.3s ease;
 }

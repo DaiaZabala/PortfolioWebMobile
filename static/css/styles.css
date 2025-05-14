@@ -105,11 +105,38 @@ body {
   color: white;
 }
 /* Carrusel */
+/*Media para que el carrusel se centre*/
+@media (max-width: 1500px) and (min-width: 500px) {
+  #Proyectos .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  #Proyectos .row {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #Proyectos .col-md-4 {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
 .carousel-indicators {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
+  bottom: 15px; /* Subí el valor si los querés más cerca del borde inferior de la imagen */
+  position: absolute;
 }
+
 
 .carousel-indicators li {
   background-color: rebeccapurple;
@@ -130,20 +157,29 @@ body {
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L6.91 1.41 3.33 5l3.58 3.59L5.5 10 0 5z'/%3E%3C/svg%3E");
 }
+.carousel-img {
+  height: 200px; /* ajustá este valor al alto que necesites */
+  object-fit: cover;
+}
+
 
 /*Agrandar Carrusel*/
 .carousel-grande {
   max-width: 100%; /* Ajustá el ancho según necesites */
-  height: 300px; /* 👈 Altura del carrusel */
-  margin-top: 1px;
+  height: 250px; /* 👈 Altura del carrusel */
+  margin: 2px;
   overflow: hidden; /* Evita que se desborde si la imagen es muy grande */
+  
 }
 
 .carousel-grande img {
-  height: 300px;
-  /* width: 100%; */
-  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  height: 250px;          /* Ajustá este valor al alto que querés */
+  width: 300px;            /* Que ocupe el ancho del contenedor */
+  object-fit: contain;    /* Evita recortes y mantiene proporciones */
+  display: block;
+  margin: 0 auto;         /* Centrada si sobra espacio horizontal */
 }
+
 
 /* Formulario */
 #Contacto .container {

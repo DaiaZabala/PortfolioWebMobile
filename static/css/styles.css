@@ -429,3 +429,39 @@ a:hover {
 p {
   text-indent: 1.5em;
 }
+/*UL SOBRE MI*/
+.datos-personales {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.datos-personales li {
+  margin-top: 15px;    /* Margen arriba */
+  margin-bottom: 15px; /* Margen abajo */
+
+}
+
+
+.datos-personales li strong {
+  font-weight: 600;
+  color:white;
+}
+
+.datos-personales li a {
+  color:antiquewhite;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.datos-personales li a:hover {
+  text-decoration: underline;
+  color:#e58fff ;
+}
+
+.datos-personales li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+

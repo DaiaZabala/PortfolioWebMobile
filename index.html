@@ -15,6 +15,14 @@
 </head>
 
 <body>
+  <div id="mantenimiento-overlay">
+    <div class="mantenimiento-contenido">
+        <h1>🛠️ Sitio en Mantenimiento</h1>
+        <p>Estamos mejorando el portfolio para vos. ¡Volvemos en unos minutos!</p>
+        <div class="loader"></div> 
+        <button onclick="quitarMantenimiento()">Entrar igual (Solo prueba)</button>
+    </div>
+</div>
   <header>
     <nav>
       <button id="menu-toggle">☰</button> <!-- 👈 Botón hamburguesa -->
@@ -45,7 +53,7 @@
           </ul>
         </div>
         <div class="col-sm-2">
-          <a class="boton" href="https://github.com/DaiaZabala" target="_blank">Ir a GITHUB</a>
+          <a class="boton" href="https://github.com/DaiaZabala" target="_blank" rel="noopener noreferrer">Ir a GITHUB</a>
         </div>
       </div>
     </nav>
@@ -356,8 +364,9 @@
           <div class="card text-white h-100" style="background: linear-gradient(135deg, #5b2c6f, #8e44ad)">
             <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; margin: 20px;">
               <iframe
+                title="Prototipo de Figma Mobile Task Manager App"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMjjwiprNOOl3oCeM2xlnSn%2FDesaf%25C3%25ADo-8%3Fnode-id%3D197-3958%26t%3DSr2RrFeYxsyFr86h-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D197%253A3115%26starting-point-node-id%3D197%253A4004%26show-proto-sidebar%3D1"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMjjwiprNOOl3oCeM2xlnSn%2FDesaf%25C3%25ADo-8%3Fnode-id%3D0-1%26t%3DzAbpoYBZCYp12vsW-1"
                 allowfullscreen></iframe>
             </div>
             <div class="card-body d-flex flex-column">
@@ -377,8 +386,12 @@
                 <strong>Tecnologías y metodologías aplicadas:</strong> Figma, diseño guiado por arquitectura,
                 componentes reutilizables, testeo de UX.
               </p>
-              <a href="https://www.figma.com/proto/MjjwiprNOOl3oCeM2xlnSn/Desaf%C3%ADo-8?node-id=197-3958&t=Sr2RrFeYxsyFr86h-1&scaling=scale-down&content-scaling=fixed&page-id=197%3A3115&starting-point-node-id=197%3A4004&show-proto-sidebar=1"
-                class="btn btn-outline-light mt-auto" target="_blank">Ver en Figma</a>
+              <div class="mt-auto d-flex gap-2">
+                <a href="https://www.figma.com/proto/MjjwiprNOOl3oCeM2xlnSn/Desaf%C3%ADo-8?node-id=0-1&t=zAbpoYBZCYp12vsW-1"
+                  class="btn btn-outline-light w-100" target="_blank" rel="noopener noreferrer">Ver Prototipo</a>
+                <a href="https://www.figma.com/design/MjjwiprNOOl3oCeM2xlnSn/Desaf%C3%ADo-8?m=auto&t=4EJXERCeR6br7vKW-6"
+                  class="btn btn-outline-light w-100" target="_blank" rel="noopener noreferrer">Ver Diseño</a>
+              </div>
             </div>
           </div>
         </div>
@@ -435,9 +448,9 @@
 
       <!-- Columna Izquierda -->
       <div class="col-md-4 text-center text-md-start">
-        <ul class="list-unstyled small">
           <h3>Datos Personales:</h3>
           <br>
+        <ul class="list-unstyled small">
           <li class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
             <p class="mb-0"><span>📍</span> Corrientes, Argentina</p>
           </li>
@@ -477,16 +490,16 @@
       <div class="col d-flex justify-content-center justify-content-md-end gap-2" style="width: 20%;">
         <h3>Redes:</h3>
         <br>
-        <a href="https://wa.me/549379415924276" target="_blank" class="text-light">
+        <a href="https://wa.me/549379415924276" target="_blank" rel="noopener noreferrer" class="text-light">
           <img src="/static/img/whatsapp.png" alt="WhatsApp" style="width: 30px;">
         </a>
-        <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" class="text-light">
+        <a href="https://www.linkedin.com/in/daiana-antonella-zabala" target="_blank" rel="noopener noreferrer" class="text-light">
           <img src="/static/img/linkedin (1).png" alt="LinkedIn" style="width: 30px;">
         </a>
-        <a href="https://github.com/DaiaZabala" target="_blank" class="text-light">
+        <a href="https://github.com/DaiaZabala" target="_blank" rel="noopener noreferrer" class="text-light">
           <img src="/static/img/github (1).png" alt="GitHub" style="width: 30px;">
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daiana.azabala@gmail.com" target="_blank"
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daiana.azabala@gmail.com" target="_blank" rel="noopener noreferrer"
           class="text-light">
           <img src="/static/img/correo (1).png" alt="Correo" style="width: 30px;">
         </a>
@@ -515,6 +528,17 @@
   </script>
 
   <script src="/static/menu-toggle.js"></script>
+  <script>
+        // Para quitar el cartel cuando termines de probar
+        function quitarMantenimiento() {
+            document.getElementById('mantenimiento-overlay').style.display = 'none';
+        }
+
+        // Para volver a ponerlo
+        function ponerMantenimiento() {
+            document.getElementById('mantenimiento-overlay').style.display = 'flex';
+        }
+    </script>
 
 </body>
 

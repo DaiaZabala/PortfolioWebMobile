@@ -9,45 +9,12 @@
     padding: 1rem 2rem;
   }
 
-  /* Fondo proyectos ajustado */
-  .fondo-proyectos {
-    min-height: auto;
-    padding: 20px;
-  }
-
-  .fondo-proyectos .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 !important; /* 👈 Esto es MUY importante */
-    
-    padding: 0 !important;
-  }
-
-  .fondo-proyectos .col {
-    flex: 0 0 calc(48% - 1rem);
-    max-width: 48%;
-    min-width: 280px;
-    box-sizing: border-box;
-    display: flex !important;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-
   /* Imágenes adaptadas */
   img {
     width: 90%;
     height: auto;
   }
 
-  /* Cards */
-  .card {
-    min-height: auto;
-    padding: 10px;
-  }
-  
   /* Texto */
   h1 {
     font-size: 2rem; /* Antes 2.5rem */
@@ -74,10 +41,10 @@
   /*VER*/
   /* Estilo del botón hamburguesa */
 #menu-toggle {
-    display: none; /* Oculto por defecto */
+    display: block; /* 👈 Mostrar hamburguesa */
     background: none;
     border: none;
-    color: white;
+    color: var(--blanco-hueso);
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
@@ -86,15 +53,11 @@
     z-index: 2001;
   }
   
-    #menu-toggle {
-      display: block; /* 👈 Mostrar hamburguesa */
-    }
-  
     #nav-links {
       display: none; /* 👈 Ocultar los links */
       flex-direction: column;
       align-items: center;
-      background: rgba(0, 0, 0, 0.8);
+      background-color: var(--gris-card);
       position: absolute;
       top: 60px; /* Justo debajo del nav */
       width: 100%;
@@ -104,18 +67,35 @@
     #nav-links.show {
       display: flex; /* 👈 Mostrar links cuando se active */
     }
-    .fondo-proyectos .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
     
-    .fondo-proyectos .col {
-      flex: 1 1 calc(48% - 1rem); /* 2 cards arriba */
-      max-width: 48%;
-      min-width: 280px;
-      box-sizing: border-box;
+  /*VER*/
+  /* Estilo del botón hamburguesa */
+#menu-toggle {
+    display: block; /* 👈 Mostrar hamburguesa */
+    background: none;
+    border: none;
+    color: var(--blanco-hueso);
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 2001;
+  }
+  
+    #nav-links {
+      display: none; /* 👈 Ocultar los links */
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--gris-card);
+      position: absolute;
+      top: 60px; /* Justo debajo del nav */
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    #nav-links.show {
+      display: flex; /* 👈 Mostrar links cuando se active */
     }
     
   }  
@@ -145,58 +125,6 @@
       text-align: justify;
     }
   
-/* 👉 SECCIÓN PROYECTOS AJUSTADA EN MÓVILES */
-.fondo-proyectos {
-  padding: 2rem 1rem;
-}
-
-.fondo-proyectos .row {
-  flex-direction: column;
-  gap: 2rem;
-  margin: 0;
-}
-
-.fondo-proyectos .col {
-  width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
-  padding: 0 !important;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  width: 100%;
-  max-width: 100%;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  background-color: #1a1a1a;
-}
-
-.card-body {
-  padding: 1rem;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  text-align: center;
-  word-break: normal;
-}
-
-.card-text {
-  font-size: 1rem;
-  text-align: justify;
-  word-break: normal;
-}
-
-.card-img-top {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -238,36 +166,13 @@ footer .row {
     padding: 0;
   }
   
-    /* Botón hamburguesa */
-    #menu-toggle {
-      display: block;
-    }
-  
-    #nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.9);
-      position: absolute;
-      top: 60px;
-      width: 100%;
-      padding: 1rem 0;
-    }
-  
-    #nav-links.show {
-      display: flex;
-    }
-    nav {
-      position: relative;
-    }
-  
     #menu-toggle {
       display: block;
       background: none;
       border: none;
       font-size: 30px;
       cursor: pointer;
-      color: white; /* o el color que uses */
+      color: var(--blanco-hueso); /* o el color que uses */
       position: absolute;
       top: 10px;
       right: 20px;
@@ -279,14 +184,14 @@ footer .row {
       flex-direction: column;
       align-items: center;
       width: 100%;
-      background-color: #222; /* o el color de fondo del nav */
+      background-color: var(--gris-card); /* o el color de fondo del nav */
       position: absolute;
       top: 50px; /* debajo del botón hamburguesa */
       left: 0;
       padding: 20px 0;
     }
   
-    #nav-links.active {
+    #nav-links.show, #nav-links.active {
       display: flex;
     }
   
@@ -307,7 +212,7 @@ footer .row {
     }
   
     nav a {
-      color: white; /* o tu color */
+      color: var(--blanco-hueso); /* o tu color */
       text-decoration: none;
       font-size: 18px;
     }
@@ -315,7 +220,7 @@ footer .row {
     nav .boton {
       display: inline-block;
       margin-top: 15px;
-      background-color: #555; /* color del botón */
+      background-color: var(--violeta-pro); /* color del botón */
       padding: 10px 20px;
       border-radius: 5px;
     }
@@ -328,6 +233,22 @@ footer .row {
     }
     label, .colocar_nombre, .colocar_email, .colocar_mensaje {
       font-size: 1rem;
+    }
+    
+    /* Ocultar iconos flotantes en móviles para que no tapen el contenido */
+    .floating-icon {
+      display: none;
+    }
+
+    /* Arreglo para que los iconos de lenguajes se acomoden de a 2 por fila */
+    #Lenguajes .row {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    #Lenguajes .col {
+      flex: 0 0 40% !important; 
+      margin-bottom: 10px;
     }
     
   }
@@ -377,16 +298,6 @@ footer .row {
       width: 25px; /* Más pequeños los íconos */
     }
   
-    nav {
-      display: flex;
-      align-items: center; /* Centra verticalmente el contenido */
-      justify-content: center;
-      height: 70px; /* Altura más controlada */
-      padding: 0 1rem;
-      background-color: #1f0035; /* O el color que uses */
-      position: relative;
-      z-index: 1000;
-    }
     
     nav #menu-toggle {
       display: none; /* Ocultar botón hamburguesa */
@@ -422,20 +333,20 @@ footer .row {
     nav a {
       font-size: 0.95rem; /* Más pequeño para que todo entre */
       padding: 4px 6px;
-      color: white;
+      color: var(--blanco-hueso);
       text-decoration: none;
     }
     
     nav a:hover {
-      color: #e58fff;
-      border-bottom: 2px solid #ded0eb;
+      color: var(--violeta-pro);
+      border-bottom: 2px solid var(--violeta-pro);
     }
     
     nav .boton {
       font-size: 0.85rem;
       padding: 6px 10px;
-      background-color: #e58fff;
-      color: #1f0035;
+      background-color: var(--violeta-pro);
+      color: var(--blanco-hueso);
       border-radius: 5px;
       white-space: nowrap; /* No se corta el botón */
     }
@@ -447,6 +358,20 @@ footer .row {
       padding: 4rem 2rem;
     }
   
+    /* Menú navegación horizontal */
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      background: transparent;
+      position: static;
+      padding: 0;
+    }
+  
+    nav ul li a {
+      font-size: 1.1rem;
+    }
+
     /* Secciones más amplias */
     section {
       padding: 3rem 8rem;
@@ -468,44 +393,6 @@ footer .row {
       line-height: 1.8;
     }
   
-    .fondo-proyectos {
-      width: 95%;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 20px;
-      min-height: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .fondo-proyectos .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    
-    .fondo-proyectos .col {
-      flex: 0 0 calc(48% - 1rem);
-      max-width: 48%;
-      min-width: 280px;
-      box-sizing: border-box;
-      display: flex !important;
-      flex-direction: column;
-      align-items: stretch;
-    }
-    
-    
-    .card {
-      width: 100%;
-      min-height: auto;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
     /* Imagenes más grandes */
     img {
       width: 70%;
@@ -586,19 +473,17 @@ footer .row {
       opacity: 0.6;
     }
   
-    /* Menú navegación horizontal */
-    nav ul {
-      flex-direction: row;
-      justify-content: center;
-      gap: 2rem;
-      background: transparent;
-      position: static;
-      padding: 0;
+    /* Arreglar el formulario de contacto para que no se desborde */
+    .campo-formulario {
+      flex-direction: column;
+      align-items: flex-start;
     }
-  
-    nav ul li a {
-      font-size: 1.1rem;
+    .campo-formulario label {
+      width: 100%;
+      text-align: left;
+    }
+    .campo-formulario input,
+    .campo-formulario textarea {
+      width: 100% !important;
     }
   }
-   
-  

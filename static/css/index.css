@@ -1,3 +1,11 @@
+:root {
+  --noche: #020617;
+  --gris-card: #1e293b;
+  --violeta-pro: #7c3aed;
+  --blanco-hueso: #f8fafc;
+  --gris-texto: #94a3b8;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +18,17 @@ html {
 
 body {
   font-family: "Sora", sans-serif;
-  background: radial-gradient(circle at top right, #5825c1, #000000);
-  color: #f5f5ff;
+  background-color: var(--noche);
+  color: var(--gris-texto);
   min-height: 100vh;
-  margin: 0;
-  padding-bottom: px; /* 👈 Espacio para que el footer no tape */
+  padding-bottom: 60px; /* 👈 Espacio para que el footer no tape */
+  padding-top: 80px; /* Asegurar que el body no quede tapado por el header fixed */
 
+}
+
+/* Títulos en blanco hueso */
+h1, h2, h3, h4, h5, .gradient-text {
+  color: var(--blanco-hueso);
 }
 
 main {
@@ -23,14 +36,23 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 3rem 1rem;
   min-height: 100vh;
 }
 
+#inicio {
+  background-color: var(--noche);
+  color: var(--blanco-hueso);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
 .container {
   max-width: 1000px;
-  background: rgba(255, 255, 255, 0.05);
+  background-color: var(--gris-card);
   padding: 3rem 2rem;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
@@ -43,13 +65,13 @@ section {
   padding: 2rem 8rem;
   max-width: 4000px;
   /* margin: 0 auto; si pongo esto se centra*/ 
-  color: #f5f5ff;
+  color: var(--blanco-hueso);
   font-size: 1rem;
   line-height: 1.6;
   display: block;
   text-align: justify;
 }
-col{
+.col {
   text-align: justify;
   text-indent: 1em;
 }
@@ -64,24 +86,23 @@ col{
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #eae6f2;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #e58fff;
   margin-bottom: 1rem;
 }
-h3 .lenguaje{
+h3.lenguaje, .lenguaje {
   font-size: 18px;
   text-indent: 2rem;
+  color: var(--blanco-hueso);
 }
 
 p {
   font-size: 0.75rem;
   line-height: 1.6;
-  color: #ded0eb;
+  color: var(--gris-texto);
   text-align: justify;
   text-indent: 1em;
 }
@@ -89,13 +110,13 @@ p {
 text-align: center;
 font-size: 2.5rem;
   font-weight: 700;
-  color: #eae6f2;
+  color: var(--blanco-hueso);
 }
 .titulos{
   text-decoration:underline;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #e58fff;
+  color: var(--violeta-pro);
   margin-bottom: 1rem;
   text-decoration-thickness: 2px; /* opcional, para hacerlo más visible */
   text-underline-offset: 10px;     /* esto lo hace "flotar" más abajo */
@@ -107,8 +128,8 @@ font-size: 2.5rem;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #9914c1, #e58fff);
-  color: white;
+  background-color: var(--violeta-pro);
+  color: var(--blanco-hueso);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -118,19 +139,121 @@ font-size: 2.5rem;
   transform: scale(1.05);
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+.inicio-saludo, .inicio-rol {
+  color: #e0bfff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--violeta-pro), #c080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inicio-desc, .inicio-cursos-text {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.inicio-cursos-lista {
+  padding-left: 20px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #ccc;
+}
+
+.inicio-cursos-small {
+  color: #ddd;
+}
+
+.btn-cv {
+  background-color: var(--violeta-pro);
+  border: none;
+  color: white !important;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: var(--violeta-hover);
+  transform: translateY(-3px); /* Pequeña animación de subida */
+}
+
+/* Animación de pulsación para los íconos de redes */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.icon-pulse {
+  color: var(--violeta-pro) !important;
+  transition: transform 0.3s;
+}
+
+.icon-pulse:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Animación flotante para los íconos tecnológicos */
+/* Contenedor de la imagen central */
+.hero-img-container {
+  max-width: 350px; /* Ancho máximo controlado */
   width: 100%;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  display: flex;
-  justify-content: center; /* Centra el contenido dentro del nav */
-  align-items: center;
+}
+
+/* Colores de iconos flotantes */
+.text-js { color: #f7df1e; }
+.text-react { color: #61dafb; }
+.text-node { color: #68a063; }
+.text-html { color: #e34c26; }
+.text-css { color: #264de4; }
+.text-db { color: #336791; }
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  animation: floating 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.hero-img {
+  max-width: 250px;
+  display: block;
+  background-color: var(--noche);
+  padding: 5px;
+  margin: 0 auto;
+}
+
+/* Navbar transparente al hacer scroll */
+.bg-noche-transparente {
+  background-color: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(10px); /* Efecto blur moderno */
+}
+
+.nav-link.hover-violeta:hover {
+  color: var(--violeta-pro) !important;
+}
+
+/* Botón personalizado estilo "Ir a GITHUB" */
+.btn-violeta-pro {
+  background-color: var(--violeta-pro);
+  color: white !important;
+  border-radius: 50px;
+  padding: 10px 25px !important;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .row {
@@ -151,12 +274,12 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--blanco-hueso);
   font-size: 16px;
 }
 
-a {
-  color: aliceblue;
+a:not(.nav-link):not(.navbar-brand):not(.btn) {
+  color: var(--blanco-hueso);
   text-decoration: none;
   font-size: 16px;
   padding: 10px;
@@ -164,10 +287,10 @@ a {
   
 }
 
-a:hover {
-  color: #e58fff;
+a:not(.nav-link):not(.navbar-brand):not(.btn):hover {
+  color: var(--violeta-pro);
   border-radius: 8px;
-  border: 2px solid #ded0eb;
+  border: 2px solid var(--violeta-pro);
   padding: 10px 20px;
   transform: scale(1.05);
 }
@@ -178,9 +301,9 @@ a:hover {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  color: #e58fff;
+  color: var(--violeta-pro);
   border-radius: 8px;
-  border: 2px solid #ded0eb;
+  border: 2px solid var(--gris-card);
   padding: 10px 20px;
   margin-bottom: 8px;
   
@@ -201,78 +324,60 @@ img {
   display: block;
   margin: 0 auto;
 }
-.sobreMi-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.sobreMi-col {
-  flex: 0 0 auto;
-}
-
-.sobreMi-texto {
-  flex: 1 1 0;
-  text-align: justify;
-}
 
 
 /*Cards Proyectos*/
-.card {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  min-height: 600px;
-  padding: 20px;
-  height: 100%;
-}
-
-.card-img-top {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.5s ease; /* Animación suave */
-}
-
-.card:hover .card-img-top {
-  transform: scale(1.05); /* Agranda la imagen un 5% */
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.btn-outline-light {
-  border-radius: 30px;
-  padding: 8px 20px;
-}
-
-.fondo-proyectos {
-  background: linear-gradient(135deg, #5B2C6F, #8E44AD);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 800px;
+.bg-gris-card-section {
+  background-color: var(--gris-card);
   border-radius: 40px;
-  overflow: hidden;
 }
 
-.fondo-proyectos .row {
-  margin-left: 30px;
-  margin-right: 30px;
+/* Tarjetas modernas */
+.card-moderna {
+  background-color: #1a2236;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-moderna:hover {
+  transform: translateY(-5px);
+  border-color: var(--violeta-pro);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-moderna .card-img-top {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-moderna:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.btn-outline-violeta {
+  color: var(--violeta-pro);
+  border: 2px solid var(--violeta-pro);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-violeta:hover {
+  background-color: var(--violeta-pro);
+  color: white;
+  transform: translateY(-2px);
 }
 
 .linea-suave {
   border: none;
   height: 2px; /* Grosor de la línea */
-  background: linear-gradient(to right, #8e44ad, #3498db); /* Degradado lindo */
+  background-color: var(--violeta-pro);
   margin: 10px 0; /* Separación arriba y abajo */
   opacity: 0.7; /* Un poco de transparencia */
   border-radius: 5px; /* Bordes redondeados */
@@ -288,12 +393,19 @@ img {
 /*Contacto*/
 label{
   display: block; 
-	float: center; 	
 }
 
 .aviso{
 	font-size: 25px;  
-	color: white;  
+	color: var(--blanco-hueso);  
+}
+
+.btn-violeta-pro:hover {
+  background-color: var(--violeta-hover);
+}
+
+.border-violeta-pro {
+  border-color: var(--violeta-pro) !important;
 }
 .campo-formulario {
   display: flex;
@@ -314,12 +426,20 @@ label{
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: var(--blanco-hueso);
 }
 
 span.obligatorio-contacto {
-  color: red;
+  color: var(--violeta-pro);
   font-size: 18px;
   margin-left: 5px;
+}
+
+#mensaje-enviado {
+  display: none;
+  color: var(--violeta-pro);
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 /*Footer*/
@@ -338,14 +458,17 @@ span.obligatorio-contacto {
 }
 
 footer {
-  width: 100%;
   padding: 0.75rem;
   text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
+  color: var(--blanco-hueso);
+  background-color: var(--noche);
   backdrop-filter: blur(10px);
   border-top: 1px solid #8a8a8a;
 }
+.copy {
+  text-align: center;
+}
+
 .copy h2 {
   font-size: 1rem; /* tamaño de un texto normal */
   font-weight: 400; /* opcional: peso normal */
@@ -376,11 +499,118 @@ footer a.text-light {
   display: none; /* Oculto por defecto */
   background: none;
   border: none;
-  color: white;
+  color: var(--blanco-hueso);
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
   right: 20px;
   top: 10px;
   z-index: 2001;
+}
+
+.figma-container {
+  position: relative;
+  padding-bottom: 65%;
+  height: 0;
+  overflow: hidden;
+  margin: 20px;
+}
+.figma-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.figma-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-icon {
+  width: 30px;
+}
+.footer-redes {
+  width: 20%;
+}
+
+/* Posiciones de los íconos flotantes */
+.icon-js {
+  top: 5%;
+  left: 10%;
+}
+
+.icon-react {
+  bottom: 5%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.icon-node {
+  top: 25%;
+  right: 0%;
+  animation-delay: 2s;
+}
+
+.icon-html {
+  bottom: 20%;
+  left: 0%;
+  animation-delay: 3s;
+}
+
+.icon-css {
+  top: 45%;
+  left: -5%;
+  font-size: 2.5em;
+  animation-delay: 0.5s;
+}
+
+.icon-db {
+  bottom: 30%;
+  right: -5%;
+  font-size: 2.5em;
+  animation-delay: 2.5s;
+}
+#mantenimiento-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo casi blanco o elegí un gris oscuro */
+    z-index: 9999; /* Asegura que esté arriba de todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.mantenimiento-contenido h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mantenimiento-contenido p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Opcional: Un pequeño animado para que no parezca estático */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

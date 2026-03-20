@@ -26,6 +26,17 @@ body {
 
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
+  z-index: 2000;
+  background-color: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(10px);
+}
+
 /* Títulos en blanco hueso */
 h1, h2, h3, h4, h5, .gradient-text {
   color: var(--blanco-hueso);
@@ -112,6 +123,11 @@ font-size: 2.5rem;
   font-weight: 700;
   color: var(--blanco-hueso);
 }
+
+#sobreMi .titu {
+  color: var(--violeta-pro);
+}
+
 .titulos{
   text-decoration:underline;
   font-size: 2.5rem;
@@ -256,12 +272,30 @@ font-size: 2.5rem;
   display: inline-block;
 }
 
-.row {
+nav {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-links {
   display: flex;
   justify-content: center; /* Centra los elementos hijos */
   align-items: center;
-  gap: 2rem; /* Espacio entre cada enlace */
-  flex-wrap: wrap;
+  gap: 1rem; /* Reducimos el espacio para que el botón entre bien */
+  flex-wrap: nowrap; /* 👈 Evita que el botón salte a la línea de abajo */
+  margin: 0; /* 👈 Elimina el margen negativo por defecto de Bootstrap que lo descentra */
+}
+
+nav .boton {
+  margin-top: 0; /* 👈 Quita el margen extra que hacía que el botón se viera más abajo */
+  white-space: nowrap; /* Evita que el texto del botón se divida en dos renglones */
+}
+
+#nav-links .col, #nav-links .col-sm-2 {
+  text-align: center; /* 👈 Asegura que cada enlace esté en el centro de su columna */
 }
 
 nav .logo {
@@ -284,10 +318,11 @@ a:not(.nav-link):not(.navbar-brand):not(.btn) {
   font-size: 16px;
   padding: 10px;
   white-space: nowrap; /* 👈 esto evita que se divida en 2 líneas */
-  
+  transition: all 0.3s ease;
 }
 
-a:not(.nav-link):not(.navbar-brand):not(.btn):hover {
+a:not(.nav-link):not(.navbar-brand):not(.btn):hover,
+a:not(.nav-link):not(.navbar-brand):not(.btn).active-link {
   color: var(--violeta-pro);
   border-radius: 8px;
   border: 2px solid var(--violeta-pro);
@@ -504,7 +539,7 @@ footer a.text-light {
   cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 10px;
+  top: 15px;
   z-index: 2001;
 }
 

@@ -38,7 +38,6 @@
     margin-bottom: 1rem;
   }
     
-  /*VER*/
   /* Estilo del botón hamburguesa */
 #menu-toggle {
     display: block; /* 👈 Mostrar hamburguesa */
@@ -49,7 +48,7 @@
     cursor: pointer;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 15px;
     z-index: 2001;
   }
   
@@ -59,7 +58,7 @@
       align-items: center;
       background-color: var(--gris-card);
       position: absolute;
-      top: 60px; /* Justo debajo del nav */
+      top: 100%; /* Justo debajo del nav */
       width: 100%;
       padding: 1rem 0;
     }
@@ -67,37 +66,6 @@
     #nav-links.show {
       display: flex; /* 👈 Mostrar links cuando se active */
     }
-    
-  /*VER*/
-  /* Estilo del botón hamburguesa */
-#menu-toggle {
-    display: block; /* 👈 Mostrar hamburguesa */
-    background: none;
-    border: none;
-    color: var(--blanco-hueso);
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    z-index: 2001;
-  }
-  
-    #nav-links {
-      display: none; /* 👈 Ocultar los links */
-      flex-direction: column;
-      align-items: center;
-      background-color: var(--gris-card);
-      position: absolute;
-      top: 60px; /* Justo debajo del nav */
-      width: 100%;
-      padding: 1rem 0;
-    }
-  
-    #nav-links.show {
-      display: flex; /* 👈 Mostrar links cuando se active */
-    }
-    
   }  
 
   @media (max-width: 650px) {
@@ -174,7 +142,7 @@ footer .row {
       cursor: pointer;
       color: var(--blanco-hueso); /* o el color que uses */
       position: absolute;
-      top: 10px;
+    top: 15px;
       right: 20px;
       z-index: 1000;
     }
@@ -186,7 +154,7 @@ footer .row {
       width: 100%;
       background-color: var(--gris-card); /* o el color de fondo del nav */
       position: absolute;
-      top: 50px; /* debajo del botón hamburguesa */
+    top: 100%; /* debajo del header */
       left: 0;
       padding: 20px 0;
     }
@@ -227,9 +195,6 @@ footer .row {
     .mifoto {
       width: 200px;
       height: 200px;
-      display: block; /* Asegura que sea bloque */
-      margin-left: auto;
-      margin-right: auto;
     }
     label, .colocar_nombre, .colocar_email, .colocar_mensaje {
       font-size: 1rem;
@@ -259,7 +224,6 @@ footer .row {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
       text-align: center;
     }
   
@@ -402,8 +366,6 @@ footer .row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: nowrap;
       text-align: left;
     }
   

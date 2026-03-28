@@ -204,17 +204,6 @@ footer .row {
     .floating-icon {
       display: none;
     }
-
-    /* Arreglo para que los iconos de lenguajes se acomoden de a 2 por fila */
-    #Lenguajes .row {
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    #Lenguajes .col {
-      flex: 0 0 40% !important; 
-      margin-bottom: 10px;
-    }
     
   }
   

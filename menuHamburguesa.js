@@ -8,11 +8,46 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("show");
     });
 
-    // Cerrar el menú automáticamente al tocar un enlace
+    // Cerrar el menú automáticamente y hacer scroll suave al tocar un enlace
     const links = navLinks.querySelectorAll("a");
     links.forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
+      link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href");
+        
+        // Si es un enlace interno a una sección (empieza con #)
+        if (targetId && targetId.startsWith("#")) {
+          e.preventDefault(); // Evita el salto instantáneo
+          navLinks.classList.remove("show"); // Cierra el menú
+          
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            const headerHeight = 70; // Altura aproximada de tu menú fijo
+            const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+            
+            const startPosition = window.scrollY;
+            const distance = targetPosition - startPosition;
+            const duration = 1000; // 👈 1000ms = 1 segundo. Puedes aumentarlo (ej. 1500) para que sea más lento
+            let start = null;
+
+            window.requestAnimationFrame(function step(timestamp) {
+              if (!start) start = timestamp;
+              const progress = timestamp - start;
+              
+              // Efecto de suavizado: arranca lento, acelera, frena lento
+              const easeInOut = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+              const percent = Math.min(progress / duration, 1);
+              
+              window.scrollTo(0, startPosition + distance * easeInOut(percent));
+              
+              if (progress < duration) {
+                window.requestAnimationFrame(step);
+              }
+            });
+          }
+        } else {
+          // Si es un enlace externo (como GitHub), solo cerramos el menú
+          navLinks.classList.remove("show");
+        }
       });
     });
   }

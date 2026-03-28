@@ -243,6 +243,10 @@ font-size: 2.5rem;
   z-index: 10;
 }
 
+.hero-img-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
 .hero-img {
   max-width: 250px;
   display: block;
@@ -391,6 +395,11 @@ img {
 
 .card-moderna:hover .card-img-top {
   transform: scale(1.05);
+}
+
+/* Tarjetas con degradado */
+.bg-gradient-violeta {
+  background: linear-gradient(135deg, #5b2c6f, #8e44ad);
 }
 
 .btn-outline-violeta {
@@ -649,4 +658,9 @@ footer a.text-light {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Filtro para hacer blancos los íconos oscuros */
+.icono-blanco {
+  filter: invert(1);
 }

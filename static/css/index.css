@@ -188,7 +188,7 @@ font-size: 2.5rem;
   border: none;
   color: white !important;
   border-radius: 50px;
-  padding: 12px 30px;
+  padding: 10px 25px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -363,6 +363,12 @@ img {
   border-radius: 50%;
   display: block;
   margin: 0 auto;
+  transition: all 0.3s ease-in-out; /* Transición suave para el efecto */
+}
+
+.mifoto:hover {
+  transform: scale(1.02); /* Opcional: la hacemos un poquito más grande */
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.7); /* Resplandor violeta */
 }
 
 
@@ -406,7 +412,7 @@ img {
   color: var(--violeta-pro);
   border: 2px solid var(--violeta-pro);
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-weight: 600;
   text-decoration: none;
   text-align: center;

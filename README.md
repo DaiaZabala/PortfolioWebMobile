@@ -6,7 +6,6 @@ Bienvenid@ a la versión mobile-friendly de mi portfolio web, diseñada especial
 
 👉 [Visitar portfolio web mobile](https://portfoliozabala.netlify.app/)
 
----
 
 ## 🛠️ Tecnologías utilizadas
 
